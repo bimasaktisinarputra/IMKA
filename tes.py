@@ -45,16 +45,16 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-pasien_ref = db.collection(u'Obat')
+obat_ref = db.collection(u'Obat')
 
-docs = pasien_ref.get()
+docs = obat_ref.get()
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    a=getdatapasien("Bxx6ygvQsIdsQkOp1eVF")
+    a=getdataobat("Bxx6ygvQsIdsQkOp1eVF")
     return jsonify(a)
 
 
